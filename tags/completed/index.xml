@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>completed on Stephan Bischoff</title>
+    <link>/tags/completed/</link>
+    <description>Recent content in completed on Stephan Bischoff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 14 Feb 2018 15:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/completed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Obstalce Avoidance</title>
+      <link>/projects/obstalce-avoidance/</link>
+      <pubDate>Wed, 14 Feb 2018 15:00:00 +0200</pubDate>
+      
+      <guid>/projects/obstalce-avoidance/</guid>
+      <description>Description The Nao Team of the HTWK is a major participant in the Robocups Standard Platform League. With a team of 6 humanoid robots we play soccer against a different team with the same type of robots. The SPL is a contest of software that uses the given hardware (the standard platform) in the best way to score goals.
+Part of the competition rules is the so called &amp;ldquo;pushing&amp;rdquo; rule. It punishes the robot that caused the falldown of a competing robot in a situation when the ball is not directly involved.</description>
+    </item>
+    
+  </channel>
+</rss>

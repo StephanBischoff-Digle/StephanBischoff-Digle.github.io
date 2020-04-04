@@ -28,38 +28,8 @@
   </url>
   
   <url>
-    <loc>/projects/obstalce-avoidance/</loc>
-    <lastmod>2020-04-04T17:45:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/databio/</loc>
-    <lastmod>2020-04-04T17:44:52+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/notifier-bot/</loc>
-    <lastmod>2020-04-04T15:32:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/warehous-creator/</loc>
-    <lastmod>2020-04-04T15:17:33+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/2020/04/my-first-post/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
+    <lastmod>2020-04-04T19:50:59+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
@@ -73,8 +43,53 @@
   </url>
   
   <url>
+    <loc>/tags/wip/</loc>
+    <lastmod>2020-04-04T19:50:59+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/2020/04/my-first-post/</loc>
+    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/test/</loc>
     <lastmod>2020-04-04T15:14:01+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/handed-over/</loc>
+    <lastmod>2019-08-01T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/notifier-bot/</loc>
+    <lastmod>2019-08-01T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/warehous-creator/</loc>
+    <lastmod>2019-02-01T09:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/completed/</loc>
+    <lastmod>2018-02-14T15:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/obstalce-avoidance/</loc>
+    <lastmod>2018-02-14T15:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/databio/</loc>
+    <lastmod>2017-11-01T17:44:52+02:00</lastmod>
   </url>
   
   <url>
