@@ -1,49 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/portfolio/magazino/notifier-bot/</loc>
-    <lastmod>2020-04-04T15:32:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/</loc>
-    <lastmod>2020-04-04T15:32:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2020-04-04T15:32:53+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/portfolio/magazino/warehous-creator/</loc>
-    <lastmod>2020-04-04T15:17:33+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/2020/04/my-first-post/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/test/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>/en/sitemap.xml</loc>
+		
+	   	<lastmod>2020-04-04T15:32:53+02:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>/fr/sitemap.xml</loc>
+		
+	</sitemap>
+	
+</sitemapindex>
