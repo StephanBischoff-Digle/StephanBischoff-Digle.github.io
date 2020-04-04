@@ -3,12 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/portfolio/notifier-bot/</loc>
+    <loc>/portfolio/magazino/notifier-bot/</loc>
     <lastmod>2020-04-04T15:32:53+02:00</lastmod>
   </url>
   
   <url>
-    <loc>/portfolio/</loc>
+    <loc>/projects/</loc>
     <lastmod>2020-04-04T15:32:53+02:00</lastmod>
   </url>
   
@@ -18,7 +18,7 @@
   </url>
   
   <url>
-    <loc>/portfolio/warehous-creator/</loc>
+    <loc>/portfolio/magazino/warehous-creator/</loc>
     <lastmod>2020-04-04T15:17:33+02:00</lastmod>
   </url>
   
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>/tags/untagged/</loc>
+    <loc>/tags/test/</loc>
     <lastmod>2020-04-04T15:14:01+02:00</lastmod>
   </url>
   

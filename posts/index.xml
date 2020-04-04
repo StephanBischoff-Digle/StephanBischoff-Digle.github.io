@@ -14,10 +14,9 @@
             <pubDate>Sat, 04 Apr 2020 15:14:01 +0200</pubDate>
             
             <guid>/posts/2020/04/my-first-post/</guid>
-            <description>My First Post This is just some setup test stuff.
+            <description>This is just some setup test stuff.
 #include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;#34;Hello, World!&amp;#34; &amp;lt;&amp;lt; std::endl; return 0; } </description>
-            <content type="html"><![CDATA[<h1 id="my-first-post">My First Post</h1>
-<p>This is just some setup test stuff.</p>
+            <content type="html"><![CDATA[<p>This is just some setup test stuff.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
