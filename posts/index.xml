@@ -10,21 +10,152 @@
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>My First Post</title>
-            <link>/posts/2020/04/my-first-post/</link>
+            <title>Code Setup Post</title>
+            <link>/posts/2020/04/code-setup-post/</link>
             <pubDate>Sat, 04 Apr 2020 15:14:01 +0200</pubDate>
             
-            <guid>/posts/2020/04/my-first-post/</guid>
+            <guid>/posts/2020/04/code-setup-post/</guid>
             <description>This is just some setup test stuff.
-#include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;#34;Hello, World!&amp;#34; &amp;lt;&amp;lt; std::endl; return 0; } </description>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida velit ut massa efficitur aliquam. Curabitur id congue elit, vitae maximus metus. Proin pretium dapibus fermentum. Proin finibus bibendum cursus. Mauris rutrum tellus orci, malesuada blandit sapien ornare vehicula. Aenean a augue sed lacus aliquet vulputate. In ipsum nunc, laoreet non dolor a, aliquet facilisis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</description>
             <content type="html"><![CDATA[<p>This is just some setup test stuff.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;iostream&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
-    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div>]]></content>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida velit
+ut massa efficitur aliquam. Curabitur id congue elit, vitae maximus metus. Proin
+pretium dapibus fermentum. Proin finibus bibendum cursus. Mauris rutrum tellus
+orci, malesuada blandit sapien ornare vehicula. Aenean a augue sed lacus aliquet
+vulputate. In ipsum nunc, laoreet non dolor a, aliquet facilisis neque. Interdum
+et malesuada fames ac ante ipsum primis in faucibus. Sed eget ipsum lorem.
+Praesent sagittis elementum diam, ut bibendum odio finibus nec. Pellentesque
+quis nulla lacinia, dictum nulla at, sodales orci.</p>
+<p>Pellentesque at eleifend magna, eu convallis tellus. Suspendisse potenti.
+Phasellus eget tristique nunc, eget pharetra sapien. Nam porta libero in nisi
+luctus viverra. Vivamus porta magna gravida augue feugiat ullamcorper. Ut diam
+dolor, luctus ut tempus id, dapibus ut quam. In hac habitasse platea dictumst.</p>
+<p>Aenean lectus massa, fringilla sed maximus ac, posuere vitae ipsum. Cras et
+lacus sapien. Maecenas gravida rhoncus magna quis commodo. Vivamus elementum,
+tortor vitae cursus fermentum, justo nisl consequat tortor, vitae mollis magna
+ex ac risus. Cras condimentum urna ut magna lacinia molestie. Aliquam et nibh
+pharetra elit condimentum pharetra non non est. Nullam scelerisque lacinia nulla
+vitae viverra. Aenean hendrerit suscipit sem, sed sodales eros ullamcorper sed.
+Morbi semper neque sed risus gravida ornare. Curabitur sodales ut metus in
+tincidunt.</p>
+<pre><code class="language-treeview">dcp/
+|-- LICENSE
+|-- README.md
+|-- .git/
+`-- cpp
+    |-- build/
+    |-- CMakeLists.txt
+    |-- README.md
+    |-- compile_commands.json
+    |-- dbg/
+    |-- Debug/
+    |-- gtest/
+    `-- solutions/
+        |-- CMakeLists.txt
+        |-- 001/
+        |   |-- CMakeLists.txt
+        |   |-- README.md
+        |   |-- solution.h
+        |   `-- test.cpp
+        |-- 002/
+        |   |-- CMakeLists.txt
+        |   |-- README.md
+        |   |-- solution.h
+        |   `-- test.cpp
+        |-- 003/
+        |   |-- CMakeLists.txt
+        |   |-- README.md
+        |   |-- solution.h
+        |   `-- test.cpp
+        `-- ...
+</code></pre>
+<h3 id="cppcmakeliststxt">cpp/CMakeLists.txt</h3>
+<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
+massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
+In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
+faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
+ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
+sit amet convallis condimentum. Aliquam erat volutpat.</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
+project(cpp_dcp)
+
+add_compile_options(
+    -g
+    -fPIC
+    -fdiagnostics-color=always
+    -Wall
+    -Wextra
+    -Werror
+    -pedantic)
+
+# Use GoogleTest for Unit Tests
+add_subdirectory(gtest)
+include(GoogleTest)
+enable_testing()
+
+# Use dbg macro
+# add_subdirectory(dbg)
+
+# solutions and tests
+add_subdirectory(solutions)
+</code></pre>
+<h3 id="cppsolutionscmakeliststxt">cpp/solutions/CMakeLists.txt</h3>
+<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
+massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
+In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
+faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
+ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
+sit amet convallis condimentum. Aliquam erat volutpat.</p>
+<pre><code class="language-cmake"># List of days
+add_subdirectory(001)
+add_subdirectory(002)
+add_subdirectory(003)
+# ...
+</code></pre>
+<h3 id="day-level-cmakeliststxt">Day Level CMakeLists.txt</h3>
+<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
+massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
+In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
+faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
+ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
+sit amet convallis condimentum. Aliquam erat volutpat.</p>
+<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
+project(Day001)
+
+add_library(${PROJECT_NAME}
+    solution.h
+)
+
+target_link_libraries(${PROJECT_NAME})
+target_include_directories(${PROJECT_NAME} PUBLIC .)
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    CXX_STANDARD 17
+    LINKER_LANGUAGE CXX)
+
+
+# Generate testing binary
+add_executable(${PROJECT_NAME}_test tests.cc)
+
+target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME} gtest_main)
+gtest_add_tests(${PROJECT_NAME}_test &quot;&quot; AUTO)
+
+</code></pre>
+<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
+massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
+In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
+faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
+ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
+sit amet convallis condimentum. Aliquam erat volutpat.</p>
+<pre class="command-line" 
+     data-user='stb' 
+     data-host=''
+     
+     >
+     <code class="language-bash">cd dcp/cpp/build
+cmake ..
+make</code></pre>
+
+]]></content>
         </item>
         
     </channel>

@@ -13,13 +13,13 @@
     
     
     <item>
-      <title>My First Post</title>
-      <link>/posts/2020/04/my-first-post/</link>
+      <title>Code Setup Post</title>
+      <link>/posts/2020/04/code-setup-post/</link>
       <pubDate>Sat, 04 Apr 2020 15:14:01 +0200</pubDate>
       
-      <guid>/posts/2020/04/my-first-post/</guid>
+      <guid>/posts/2020/04/code-setup-post/</guid>
       <description>This is just some setup test stuff.
-#include &amp;lt;iostream&amp;gt; int main() { std::cout &amp;lt;&amp;lt; &amp;#34;Hello, World!&amp;#34; &amp;lt;&amp;lt; std::endl; return 0; } </description>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida velit ut massa efficitur aliquam. Curabitur id congue elit, vitae maximus metus. Proin pretium dapibus fermentum. Proin finibus bibendum cursus. Mauris rutrum tellus orci, malesuada blandit sapien ornare vehicula. Aenean a augue sed lacus aliquet vulputate. In ipsum nunc, laoreet non dolor a, aliquet facilisis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</description>
     </item>
     
   </channel>
