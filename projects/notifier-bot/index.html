@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Stephan Bischoff ">
-<meta name="description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse." />
+<meta name="description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (Christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse." />
 <meta name="keywords" content="homepage, portfolio, blog, handed over" />
 <meta name="robots" content="noodp" />
 <meta name="theme-color" content="" />
@@ -25,16 +25,16 @@
 
 
 
-<link rel="stylesheet" href="/main.min.a6830d82e068efc448f32bd84bde5e7b73b0876c5fe39907e74501f1c37ad200.css">
+<link rel="stylesheet" href="/main.min.908b5ac8d3c5a257fddc1b103b4f87ae0503900cb54379b4fd95d1d54fae3072.css">
 
 
 
 
 <meta itemprop="name" content="Notifier Bot">
-<meta itemprop="description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse.">
+<meta itemprop="description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (Christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse.">
 <meta itemprop="datePublished" content="2019-08-01T09:00:00&#43;02:00" />
 <meta itemprop="dateModified" content="2019-08-01T09:00:00&#43;02:00" />
-<meta itemprop="wordCount" content="339">
+<meta itemprop="wordCount" content="335">
 <meta itemprop="image" content="/"/>
 
 
@@ -43,7 +43,7 @@
 <meta name="twitter:image" content="/"/>
 
 <meta name="twitter:title" content="Notifier Bot"/>
-<meta name="twitter:description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse."/>
+<meta name="twitter:description" content="Magazino The Magazino GmbH is a robotics startup based in Munich, Germany. The products of the company are autonomous logistics robots that get deployed in the warehouses of the customer to reduce the workload for the employees during times with a high amount of orders (Christmas for example) or during times when the employees are on vacation or a high rate of sickness related drop outs is to be expected. The robots, once configured, can be dropped into the warehouse."/>
 
 
 
@@ -84,7 +84,7 @@
         <span class="header__right">
             
                 <nav class="menu">
-    <ul class="menu__inner"><li><a href="/posts">posts/</a></li><li><a href="/projects">projects/</a></li>
+    <ul class="menu__inner"><li><a href="/projects">projects/</a></li>
     </ul>
 </nav>
 
@@ -131,11 +131,11 @@
 <p>The Magazino GmbH is a robotics startup based in Munich, Germany. The products
 of the company are autonomous logistics robots that get deployed in the
 warehouses of the customer to reduce the workload for the employees during times
-with a high amount of orders (christmas for example) or during times when the
+with a high amount of orders (Christmas for example) or during times when the
 employees are on vacation or a high rate of sickness related drop outs is to be
-expected. The robots, once configured, can be dropped into the warehouse.
-New robots can use the configurations of the already deployed machines, such
-that the number of robots in the warehouse could be, in theory, very dynamic.</p>
+expected. The robots, once configured, can be dropped into the warehouse.  New
+robots can use the configurations of the already deployed machines, such that
+the number of robots in the warehouse could be, in theory, very dynamic.</p>
 <h2 id="the-project">The Project</h2>
 <h3 id="description">Description</h3>
 <p>The <a href="https://www.magazino.eu">Magazino</a> robots
@@ -147,7 +147,7 @@ from afar. Additionally, operators connected to the robot via
 <a href="https://www.ssh.com/ssh/">ssh</a> were able to collect more detailed information
 over a <a href="https://github.com/tmux/tmux">tmux</a> session dedicated to logging the
 robots state.</p>
-<p>This kind of informationis useful as soon as it is generated and to more than
+<p>This kind of information useful as soon as it is generated and to more than
 just the person connected to the machine (which might be zero). The Notifier Bot
 checked the state of the robot in configured intervals and send them via
 specified channels (a chat channel or email, for example).</p>
@@ -158,9 +158,8 @@ a Mattermost channel. My task was to extract long term value from this
 implementation by refactoring the script into a more elaborate architecture
 which allowed the bot to be extended.</p>
 <p>I rewrote it using a message queue architecture. There is a base class for data
-sources and a base class for data sinks. The sources push data into the push
-data into the queue, which sanitizes the data and pushes it to the sink if
-necessary.</p>
+sources and a base class for data sinks. The sources push data into the queue,
+which sanitizes the data and pushes it to the sink if necessary.</p>
 <h3 id="technologies">Technologies</h3>
 <p><a href="https://python.org">Python 2</a> &ndash;
 <a href="https://www.djangoproject.com">Django</a> &ndash;
@@ -179,7 +178,7 @@ necessary.</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/handed-over">handed over</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>339 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>335 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-08-01 09:00 &#43;0200</p>
         </div> 

@@ -48,21 +48,6 @@
   </url>
   
   <url>
-    <loc>/posts/2020/04/code-setup-post/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/test/</loc>
-    <lastmod>2020-04-04T15:14:01+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/handed-over/</loc>
     <lastmod>2019-08-01T09:00:00+02:00</lastmod>
   </url>
@@ -73,7 +58,7 @@
   </url>
   
   <url>
-    <loc>/projects/warehous-creator/</loc>
+    <loc>/projects/warehouse-creator/</loc>
     <lastmod>2019-02-01T09:00:00+02:00</lastmod>
   </url>
   
@@ -83,7 +68,7 @@
   </url>
   
   <url>
-    <loc>/projects/obstalce-avoidance/</loc>
+    <loc>/projects/obstacle-avoidance/</loc>
     <lastmod>2018-02-14T15:00:00+02:00</lastmod>
   </url>
   

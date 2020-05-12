@@ -13,13 +13,13 @@
     
     
     <item>
-      <title>Obstalce Avoidance</title>
-      <link>/projects/obstalce-avoidance/</link>
+      <title>Obstacle Avoidance</title>
+      <link>/projects/obstacle-avoidance/</link>
       <pubDate>Wed, 14 Feb 2018 15:00:00 +0200</pubDate>
       
-      <guid>/projects/obstalce-avoidance/</guid>
-      <description>Description The Nao Team of the HTWK is a major participant in the Robocups Standard Platform League. With a team of 6 humanoid robots we play soccer against a different team with the same type of robots. The SPL is a contest of software that uses the given hardware (the standard platform) in the best way to score goals.
-Part of the competition rules is the so called &amp;ldquo;pushing&amp;rdquo; rule. It punishes the robot that caused the falldown of a competing robot in a situation when the ball is not directly involved.</description>
+      <guid>/projects/obstacle-avoidance/</guid>
+      <description>Description The Nao Team of the HTWK is a major participant in the Robocup Standard Platform League. With a team of 6 humanoid robots we play soccer against a different team with the same type of robots. The SPL is a contest of software that uses the given hardware (the standard platform) in the best way to score goals.
+Part of the competition rules is the so called &amp;ldquo;pushing&amp;rdquo; rule. It punishes the robot that caused the fall down of a competing robot in a situation when the ball is not directly involved.</description>
     </item>
     
   </channel>
