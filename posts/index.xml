@@ -6,155 +6,58 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-        <lastBuildDate>Sat, 04 Apr 2020 15:14:01 +0200</lastBuildDate>
+        <lastBuildDate>Wed, 13 May 2020 17:19:51 +0200</lastBuildDate>
         <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
         
         <item>
-            <title>Code Setup Post</title>
-            <link>/posts/2020/04/code-setup-post/</link>
-            <pubDate>Sat, 04 Apr 2020 15:14:01 +0200</pubDate>
+            <title>Head-Controller Intro</title>
+            <link>/posts/2020/05/head-controller-intro/</link>
+            <pubDate>Wed, 13 May 2020 17:19:51 +0200</pubDate>
             
-            <guid>/posts/2020/04/code-setup-post/</guid>
-            <description>This is just some setup test stuff.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida velit ut massa efficitur aliquam. Curabitur id congue elit, vitae maximus metus. Proin pretium dapibus fermentum. Proin finibus bibendum cursus. Mauris rutrum tellus orci, malesuada blandit sapien ornare vehicula. Aenean a augue sed lacus aliquet vulputate. In ipsum nunc, laoreet non dolor a, aliquet facilisis neque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</description>
-            <content type="html"><![CDATA[<p>This is just some setup test stuff.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque gravida velit
-ut massa efficitur aliquam. Curabitur id congue elit, vitae maximus metus. Proin
-pretium dapibus fermentum. Proin finibus bibendum cursus. Mauris rutrum tellus
-orci, malesuada blandit sapien ornare vehicula. Aenean a augue sed lacus aliquet
-vulputate. In ipsum nunc, laoreet non dolor a, aliquet facilisis neque. Interdum
-et malesuada fames ac ante ipsum primis in faucibus. Sed eget ipsum lorem.
-Praesent sagittis elementum diam, ut bibendum odio finibus nec. Pellentesque
-quis nulla lacinia, dictum nulla at, sodales orci.</p>
-<p>Pellentesque at eleifend magna, eu convallis tellus. Suspendisse potenti.
-Phasellus eget tristique nunc, eget pharetra sapien. Nam porta libero in nisi
-luctus viverra. Vivamus porta magna gravida augue feugiat ullamcorper. Ut diam
-dolor, luctus ut tempus id, dapibus ut quam. In hac habitasse platea dictumst.</p>
-<p>Aenean lectus massa, fringilla sed maximus ac, posuere vitae ipsum. Cras et
-lacus sapien. Maecenas gravida rhoncus magna quis commodo. Vivamus elementum,
-tortor vitae cursus fermentum, justo nisl consequat tortor, vitae mollis magna
-ex ac risus. Cras condimentum urna ut magna lacinia molestie. Aliquam et nibh
-pharetra elit condimentum pharetra non non est. Nullam scelerisque lacinia nulla
-vitae viverra. Aenean hendrerit suscipit sem, sed sodales eros ullamcorper sed.
-Morbi semper neque sed risus gravida ornare. Curabitur sodales ut metus in
-tincidunt.</p>
-<pre><code class="language-treeview">dcp/
-|-- LICENSE
-|-- README.md
-|-- .git/
-`-- cpp
-    |-- build/
-    |-- CMakeLists.txt
-    |-- README.md
-    |-- compile_commands.json
-    |-- dbg/
-    |-- Debug/
-    |-- gtest/
-    `-- solutions/
-        |-- CMakeLists.txt
-        |-- 001/
-        |   |-- CMakeLists.txt
-        |   |-- README.md
-        |   |-- solution.h
-        |   `-- test.cpp
-        |-- 002/
-        |   |-- CMakeLists.txt
-        |   |-- README.md
-        |   |-- solution.h
-        |   `-- test.cpp
-        |-- 003/
-        |   |-- CMakeLists.txt
-        |   |-- README.md
-        |   |-- solution.h
-        |   `-- test.cpp
-        `-- ...
-</code></pre>
-<h3 id="cppcmakeliststxt">cpp/CMakeLists.txt</h3>
-<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
-massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
-In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
-faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
-ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
-sit amet convallis condimentum. Aliquam erat volutpat.</p>
-<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
-project(cpp_dcp)
-
-add_compile_options(
-    -g
-    -fPIC
-    -fdiagnostics-color=always
-    -Wall
-    -Wextra
-    -Werror
-    -pedantic)
-
-# Use GoogleTest for Unit Tests
-add_subdirectory(gtest)
-include(GoogleTest)
-enable_testing()
-
-# Use dbg macro
-# add_subdirectory(dbg)
-
-# solutions and tests
-add_subdirectory(solutions)
-</code></pre>
-<h3 id="cppsolutionscmakeliststxt">cpp/solutions/CMakeLists.txt</h3>
-<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
-massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
-In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
-faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
-ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
-sit amet convallis condimentum. Aliquam erat volutpat.</p>
-<pre><code class="language-cmake"># List of days
-add_subdirectory(001)
-add_subdirectory(002)
-add_subdirectory(003)
-# ...
-</code></pre>
-<h3 id="day-level-cmakeliststxt">Day Level CMakeLists.txt</h3>
-<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
-massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
-In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
-faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
-ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
-sit amet convallis condimentum. Aliquam erat volutpat.</p>
-<pre><code class="language-cmake">cmake_minimum_required(VERSION 3.12)
-project(Day001)
-
-add_library(${PROJECT_NAME}
-    solution.h
-)
-
-target_link_libraries(${PROJECT_NAME})
-target_include_directories(${PROJECT_NAME} PUBLIC .)
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    CXX_STANDARD 17
-    LINKER_LANGUAGE CXX)
-
-
-# Generate testing binary
-add_executable(${PROJECT_NAME}_test tests.cc)
-
-target_link_libraries(${PROJECT_NAME}_test ${PROJECT_NAME} gtest_main)
-gtest_add_tests(${PROJECT_NAME}_test &quot;&quot; AUTO)
-
-</code></pre>
-<p>Quisque non consectetur metus, sit amet mollis tellus. Vestibulum volutpat,
-massa ut congue porta, ipsum leo lacinia turpis, sed mattis ante nulla non leo.
-In molestie ut turpis porta consectetur. Vivamus eget consectetur neque. Nam
-faucibus ac lectus nec efficitur. Ut tristique venenatis lectus. Vivamus ipsum
-ipsum, commodo nec egestas eu, consequat at metus. Quisque ullamcorper ligula
-sit amet convallis condimentum. Aliquam erat volutpat.</p>
-<pre class="command-line" 
-     data-user='stb' 
-     data-host=''
-     
-     >
-     <code class="language-bash">cd dcp/cpp/build
-cmake ..
-make</code></pre>
-
+            <guid>/posts/2020/05/head-controller-intro/</guid>
+            <description>General Idea  Minimize uncertainty of the location of vision related objects on the playing field  Static objects such as field markings and the goal Dynamic objects such as the ball and other robots.   Based on probabilistic distributions from the detectors and predictors Weighted on game state  Ball is not important after a goal is scored Could be modeled via weight profiles    Probability Distribution  Represented as a grid or quad tree … or something in between Grid can easily be filled with partial data and normalized to any value Quad tree is more based on areas Distributions can be layered with a game-state factor  Solver  naive approach would be a search for maxima&amp;rsquo;s while updating the distribution, such that the current view is always in the global minimum.</description>
+            <content type="html"><![CDATA[<h2 id="general-idea">General Idea</h2>
+<ul>
+<li>Minimize uncertainty of the location of vision related objects on the playing
+field
+<ul>
+<li><em>Static objects</em> such as field markings and the goal</li>
+<li><em>Dynamic objects</em> such as the ball and other robots.</li>
+</ul>
+</li>
+<li>Based on probabilistic distributions from the detectors and predictors</li>
+<li>Weighted on game state
+<ul>
+<li>Ball is not important after a goal is scored</li>
+<li>Could be modeled via weight profiles</li>
+</ul>
+</li>
+</ul>
+<h2 id="probability-distribution">Probability Distribution</h2>
+<ul>
+<li>Represented as a grid or quad tree … or something in between</li>
+<li>Grid can easily be filled with partial data and normalized to any value</li>
+<li>Quad tree is more based on areas</li>
+<li>Distributions can be layered with a game-state factor</li>
+</ul>
+<h2 id="solver">Solver</h2>
+<ul>
+<li>naive approach would be a search for maxima&rsquo;s while updating the distribution,
+such that the current view is always in the global minimum.
+<ul>
+<li>An argument is necessary to handle the situation when we actually found
+something. For example, the game-mode-factor for the found object type
+could be nulled until the uncertainty reaches a threshold again.
+Although, how to handle multiple objects of the same type remains a
+problem.</li>
+</ul>
+</li>
+</ul>
+<h3 id="inverse-gradient-descent">Inverse Gradient Descent</h3>
+<ul>
+<li>Instead of a local minimum we search for the local maximum by taking the
+steepest path up the slope instead of down</li>
+</ul>
 ]]></content>
         </item>
         

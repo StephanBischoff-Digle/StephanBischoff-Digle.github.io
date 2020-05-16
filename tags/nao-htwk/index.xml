@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nao HTWK on Stephan Bischoff</title>
+    <link>/tags/nao-htwk/</link>
+    <description>Recent content in Nao HTWK on Stephan Bischoff</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 13 May 2020 17:19:51 +0200</lastBuildDate>
+    
+	<atom:link href="/tags/nao-htwk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Head-Controller Intro</title>
+      <link>/posts/2020/05/head-controller-intro/</link>
+      <pubDate>Wed, 13 May 2020 17:19:51 +0200</pubDate>
+      
+      <guid>/posts/2020/05/head-controller-intro/</guid>
+      <description>General Idea  Minimize uncertainty of the location of vision related objects on the playing field  Static objects such as field markings and the goal Dynamic objects such as the ball and other robots.   Based on probabilistic distributions from the detectors and predictors Weighted on game state  Ball is not important after a goal is scored Could be modeled via weight profiles    Probability Distribution  Represented as a grid or quad tree … or something in between Grid can easily be filled with partial data and normalized to any value Quad tree is more based on areas Distributions can be layered with a game-state factor  Solver  naive approach would be a search for maxima&amp;rsquo;s while updating the distribution, such that the current view is always in the global minimum.</description>
+    </item>
+    
+  </channel>
+</rss>

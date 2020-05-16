@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="abc Stephan Bischoff ">
+<meta name="description" content="General Idea  Minimize uncertainty of the location of vision related objects on the playing field  Static objects such as field markings and the goal Dynamic objects such as the ball and other robots.   Based on probabilistic distributions from the detectors and predictors Weighted on game state  Ball is not important after a goal is scored Could be modeled via weight profiles    Probability Distribution  Represented as a grid or quad tree … or something in between Grid can easily be filled with partial data and normalized to any value Quad tree is more based on areas Distributions can be layered with a game-state factor  Solver  naive approach would be a search for maxima&amp;rsquo;s while updating the distribution, such that the current view is always in the global minimum." />
+<meta name="keywords" content="homepage, portfolio, blog, Nao HTWK" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="/posts/2020/05/head-controller-intro/" />
+
+
+    <title>
+        
+            Head-Controller Intro :: Stephan Bischoff 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.min.861b762fa6dbf4cf2042bbeecc3c7dc40a300128839b95ebaf282fc344ef40b1.css">
+
+
+
+
+<meta itemprop="name" content="Head-Controller Intro">
+<meta itemprop="description" content="General Idea  Minimize uncertainty of the location of vision related objects on the playing field  Static objects such as field markings and the goal Dynamic objects such as the ball and other robots.   Based on probabilistic distributions from the detectors and predictors Weighted on game state  Ball is not important after a goal is scored Could be modeled via weight profiles    Probability Distribution  Represented as a grid or quad tree … or something in between Grid can easily be filled with partial data and normalized to any value Quad tree is more based on areas Distributions can be layered with a game-state factor  Solver  naive approach would be a search for maxima&rsquo;s while updating the distribution, such that the current view is always in the global minimum.">
+<meta itemprop="datePublished" content="2020-05-13T17:19:51&#43;02:00" />
+<meta itemprop="dateModified" content="2020-05-13T17:19:51&#43;02:00" />
+<meta itemprop="wordCount" content="197">
+<meta itemprop="image" content="/"/>
+
+
+
+<meta itemprop="keywords" content="Nao HTWK," /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Head-Controller Intro"/>
+<meta name="twitter:description" content="General Idea  Minimize uncertainty of the location of vision related objects on the playing field  Static objects such as field markings and the goal Dynamic objects such as the ball and other robots.   Based on probabilistic distributions from the detectors and predictors Weighted on game state  Ball is not important after a goal is scored Could be modeled via weight profiles    Probability Distribution  Represented as a grid or quad tree … or something in between Grid can easily be filled with partial data and normalized to any value Quad tree is more based on areas Distributions can be layered with a game-state factor  Solver  naive approach would be a search for maxima&rsquo;s while updating the distribution, such that the current view is always in the global minimum."/>
+
+
+
+
+
+    <meta property="article:published_time" content="2020-05-13 17:19:51 &#43;0200 CEST" />
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/stb/</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#36a3d9;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/posts">posts/</a></li><li><a href="/projects">projects/</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="/posts/2020/05/head-controller-intro/">Head-Controller Intro</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <h2 id="general-idea">General Idea</h2>
+<ul>
+<li>Minimize uncertainty of the location of vision related objects on the playing
+field
+<ul>
+<li><em>Static objects</em> such as field markings and the goal</li>
+<li><em>Dynamic objects</em> such as the ball and other robots.</li>
+</ul>
+</li>
+<li>Based on probabilistic distributions from the detectors and predictors</li>
+<li>Weighted on game state
+<ul>
+<li>Ball is not important after a goal is scored</li>
+<li>Could be modeled via weight profiles</li>
+</ul>
+</li>
+</ul>
+<h2 id="probability-distribution">Probability Distribution</h2>
+<ul>
+<li>Represented as a grid or quad tree … or something in between</li>
+<li>Grid can easily be filled with partial data and normalized to any value</li>
+<li>Quad tree is more based on areas</li>
+<li>Distributions can be layered with a game-state factor</li>
+</ul>
+<h2 id="solver">Solver</h2>
+<ul>
+<li>naive approach would be a search for maxima&rsquo;s while updating the distribution,
+such that the current view is always in the global minimum.
+<ul>
+<li>An argument is necessary to handle the situation when we actually found
+something. For example, the game-mode-factor for the found object type
+could be nulled until the uncertainty reaches a threshold again.
+Although, how to handle multiple objects of the same type remains a
+problem.</li>
+</ul>
+</li>
+</ul>
+<h3 id="inverse-gradient-descent">Inverse Gradient Descent</h3>
+<ul>
+<li>Instead of a local minimum we search for the local maximum by taking the
+steepest path up the slope instead of down</li>
+</ul>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/nao-htwk">Nao HTWK</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>197 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2020-05-13 17:19 &#43;0200</p>
+        </div>
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="/">Stephan Bischoff</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="/bundle.min.87c348f9a9f59163019c020d4904ca95b4c43b3238d8300eab5c4fbb23fd28f78b198cfe68351334ad1067923736428ac8c417532e6ddd568f9d9484428118d8.js" integrity="sha512-h8NI&#43;an1kWMBnAINSQTKlbTEOzI42DAOq1xPuyP9KPeLGYz&#43;aDUTNK0QZ5I3NkKKyMQXUy5t3VaPnZSEQoEY2A=="></script>
+
+
+
+    </body>
+</html>
