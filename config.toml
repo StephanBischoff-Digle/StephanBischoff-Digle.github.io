@@ -6,7 +6,7 @@
 #
 #=========================================================================================
 
-base_url = "StephanBischoff-Digle.github.io"
+base_url = "https://stephanbischoff-digle.github.io"
 title = "Stephans Stuff"
 description = "The writings of Stephan Bischoff"
 default_language = "en"
