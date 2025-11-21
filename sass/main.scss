@@ -1072,11 +1072,7 @@ body.homepage {
     align-items: center;
     gap: 1em;
 
-    img {
-      height: var(--avatar-size);
-      width: var(--avatar-size);
-      border-radius: 50%;
-    }
+    
 
     #text {
       display: flex;
@@ -1084,6 +1080,33 @@ body.homepage {
       justify-content: space-around;
       line-height: 1.5;
       gap: 1em;
+
+      #avatar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          height: calc(var(--avatar-size) + 10px);
+          width: calc(var(--avatar-size) + 10px);
+          color: var(--primary-color);
+          stroke-width: 1px;
+          border: 2px solid;
+          border-radius: 50%;
+          padding: 10px;
+          box-sizing: border-box;
+          display: inline-block;
+        }
+      }
+    }
+
+    #name {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+      border-bottom: 2px solid;
+      color: var(--primary-color);
     }
 
     img + #text {
@@ -1097,6 +1120,8 @@ body.homepage {
 
     #bio {
       color: var(--text-pale-color);
+      text-align: justify;
+      text-justify: inter-word;
     }
   }
 
