@@ -11,7 +11,7 @@ generate_feeds = true
 lang = "en"
 
 title = "Advent Of Code 2025"
-subtitle = "solving problems every day"
+subtitle = "Advent of Code is an Advent Calendar of small programming puzzles for a variety of skill levels."
 
 date_format = "%b %-d, %Y"
 
