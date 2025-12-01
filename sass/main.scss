@@ -1,5 +1,10 @@
 /* base
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@import 'https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap';
+
+body {
+  --font-size: 18px;
+}
 
 *,
 *::before,
@@ -27,6 +32,7 @@ a:focus-visible {
 ::selection {
   background-color: var(--primary-color);
   color: var(--bg-color);
+  text-shadow: 2px 2px black;
 }
 
 ::-webkit-scrollbar {
@@ -61,16 +67,22 @@ a:focus-visible {
     font-size: 1.5em;
     font-weight: bolder;
     margin: 1.5em 0 0.75em;
+    color: var(--primary-color);
+    text-decoration: underline solid;
   }
 
   h2 {
-    font-size: 1.1em;
-    margin: 3em 0 1.5em;
+    font-size: 1.2em;
+    margin: 2em 0 1em;
+    color: var(--primary-color);
+    display: flex;
+    width: 100%;
   }
+
 
   h3, h4, h5, h6 {
     font-size: 1em;
-    margin: 2.5em 0 1.5em;
+    margin: 1em 0 -0.5em;
   }
 
   .zola-anchor {
@@ -92,9 +104,10 @@ a:focus-visible {
 
   p {
     font-size: 1em;
+    font-family: 'Crimson Pro';
     line-height: inherit;
     word-wrap: break-word;
-    margin: 1.5em 0;
+    margin: 1em 0;
     text-align: justify;
     text-justify: inter-word;
   }
@@ -148,9 +161,10 @@ a:focus-visible {
   }
 
   li {
-    margin: 0.5em 0;
+    margin: -0.25em 0;
+    font-family: "Crimson Pro";
     p {
-      margin: 0.5em 0;
+      margin: 0em 0;
     }
   }
 
@@ -1122,6 +1136,7 @@ body.homepage {
       color: var(--text-pale-color);
       text-align: justify;
       text-justify: inter-word;
+      font-family: 'Crimson Pro';
     }
   }
 

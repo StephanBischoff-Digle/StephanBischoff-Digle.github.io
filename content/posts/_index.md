@@ -11,11 +11,11 @@ generate_feeds = true
 lang = "en"
 
 title = "Posts"
-subtitle = "I write about ..."
+subtitle = "To whom it may concern."
 
 date_format = "%b %-d, %Y"
 
-categorized = false # posts can be categorized
+categorized = true # posts can be categorized
 back_to_top = true # show back-to-top button
 toc = true # show table-of-contents
 comment = false # enable comment
