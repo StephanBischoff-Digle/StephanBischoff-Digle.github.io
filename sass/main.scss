@@ -31,7 +31,6 @@ a:focus-visible {
 ::selection {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  text-shadow: 2px 2px black;
 }
 
 ::-webkit-scrollbar {
